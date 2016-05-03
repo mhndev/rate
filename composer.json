@@ -1,0 +1,21 @@
+{
+  "name": "mhndev/Rate",
+  "description": "Multi Purpose Rate System (Supports like, dislike, rate with other numbers or text) ",
+  "keywords": ["Rate","Rank","Like", "Dislike" , "Unlike"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "majid abdolhosseini",
+      "email": "majid.a@mabna.com",
+      "homepage":"http://mhndev.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "mhndev\\Rate\\": "src"
+    }
+  },
+  "require": {
+    "php": ">=5.4.0"
+  }
+}
