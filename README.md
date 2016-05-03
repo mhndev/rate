@@ -8,7 +8,7 @@
 ### 4) Rate with string ('good' , 'very good' , ...)
 
 ## Sample Usage
-```
+```php
 require 'vendor/autoload.php';
 
 
