@@ -50,7 +50,6 @@ abstract class User implements iUser
     abstract function doRate($value, iRateableEntity $entity);
 
 
-
     public function setRateValue(iRateValue $rateValue)
     {
         $this->rateValue = $rateValue;
