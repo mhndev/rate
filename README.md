@@ -9,9 +9,6 @@
 
 ## Sample Usage
 ```php
-require 'vendor/autoload.php';
-
-
 use mhndev\rate\Abstracts\Entity;
 use mhndev\rate\DiscreteNumberValue;
 use mhndev\rate\Interfaces\iRateableEntity;
@@ -32,10 +29,21 @@ class Post extends Entity
 }
 
 
-$post = new Post();
+class Comment extends Entity
+{
+
+}
+
+
 $rateValue = (new DiscreteNumberValue())->setPossibleValues([1,2,3]);
+$post = (new Post())->setRateValue($rateValue);
+
+$rateValue = (new DiscreteNumberValue())->setPossibleValues([-1,1]);
+$comment = (new Comment())->setRateValue($rateValue);
 
 $user = new User;
-$user->setRateValue($rateValue)->rate(4, $post);
+$user->rate(3, $post);
+$user->rate(1,$comment);
+
 
 ```
