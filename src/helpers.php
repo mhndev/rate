@@ -25,16 +25,12 @@ if (!function_exists('isAssoc')) {
 }
 
 
-if (! function_exists('isAssoc'))
-{
-    function isAssoc($arr)
-    {
-        return array_keys($arr) !== range(0, count($arr) - 1);
-    }
-}
-
 if (! function_exists('is_int_val'))
 {
+    /**
+     * @param $number
+     * @return bool
+     */
     function is_int_val($number)
     {
         return (string)(int)$number == $number;

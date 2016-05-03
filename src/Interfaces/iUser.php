@@ -1,6 +1,6 @@
 <?php
 
-namespace mhndev\Rate\Interfaces;
+namespace mhndev\rate\Interfaces;
 
 interface iUser
 {

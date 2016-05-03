@@ -1,6 +1,6 @@
 <?php
 
-namespace mhndev\Rate\Traits;
+namespace mhndev\rate\Traits;
 
 trait EntityTrait
 {

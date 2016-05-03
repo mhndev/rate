@@ -1,6 +1,6 @@
 <?php
 
-namespace mhndev\Rate\Exceptions;
+namespace mhndev\rate\Exceptions;
 
 class InvalidValue extends \Exception
 {

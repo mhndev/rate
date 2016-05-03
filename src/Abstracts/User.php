@@ -1,6 +1,6 @@
 <?php
 
-namespace mhndev\Rate\Abstracts;
+namespace mhndev\rate\Abstracts;
 
 use mhndev\Rate\Exceptions\InvalidValue;
 use mhndev\Rate\Interfaces\iRateableEntity;

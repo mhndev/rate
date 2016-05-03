@@ -1,6 +1,6 @@
 <?php
 
-namespace mhndev\Rate\Abstracts;
+namespace mhndev\rate\Abstracts;
 
 use mhndev\Rate\Interfaces\iRate;
 use mhndev\Rate\Interfaces\iRateableEntity;

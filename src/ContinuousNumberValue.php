@@ -1,6 +1,6 @@
 <?php
 
-namespace mhndev\Rate;
+namespace mhndev\rate;
 
 use mhndev\Rate\Abstracts\RateValue;
 use mhndev\Rate\Exceptions\InvalidRange;
