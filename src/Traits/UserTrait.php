@@ -34,15 +34,18 @@ trait UserTrait
     /**
      * @param $value
      * @param iRateableEntity $entity
+     * @return mixed
      * @throws InvalidValue
      */
     function rate($value, iRateableEntity $entity)
     {
         if($entity->getRateValue()->isValueValid($value)){
-            $this->doRate($value, $entity);
+            $result = $this->doRate($value, $entity);
         }else{
             throw new InvalidValue;
         }
+
+        return $result;
     }
 
     /**
