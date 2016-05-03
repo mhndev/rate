@@ -2,10 +2,10 @@
 
 namespace mhndev\rate\Abstracts;
 
-use mhndev\Rate\Exceptions\InvalidValue;
-use mhndev\Rate\Interfaces\iRateableEntity;
-use mhndev\Rate\Interfaces\iUser;
-use mhndev\Rate\Interfaces\RateValue\iRateValue;
+use mhndev\rate\Exceptions\InvalidValue;
+use mhndev\rate\Interfaces\iRateableEntity;
+use mhndev\rate\Interfaces\iUser;
+use mhndev\rate\Interfaces\RateValue\iRateValue;
 
 abstract class User implements iUser
 {

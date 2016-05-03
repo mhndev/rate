@@ -2,8 +2,8 @@
 
 namespace mhndev\rate\Abstracts;
 
-use mhndev\Rate\Exceptions\InvalidValue;
-use mhndev\Rate\Interfaces\RateValue\iRateValue;
+use mhndev\rate\Exceptions\InvalidValue;
+use mhndev\rate\Interfaces\RateValue\iRateValue;
 
 abstract class RateValue implements iRateValue
 {

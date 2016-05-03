@@ -2,7 +2,7 @@
 
 namespace mhndev\rate;
 
-use mhndev\Rate\Abstracts\RateValue;
+use mhndev\rate\Abstracts\RateValue;
 
 class StringValue extends RateValue
 {

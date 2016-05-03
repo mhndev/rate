@@ -2,8 +2,8 @@
 
 namespace mhndev\rate;
 
-use mhndev\Rate\Abstracts\RateValue;
-use mhndev\Rate\Exceptions\InvalidRange;
+use mhndev\rate\Abstracts\RateValue;
+use mhndev\rate\Exceptions\InvalidRange;
 
 class ContinuousNumberValue extends RateValue
 {

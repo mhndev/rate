@@ -2,7 +2,7 @@
 
 namespace mhndev\rate\Interfaces;
 
-use mhndev\Rate\Interfaces\RateValue\iRateValue;
+use mhndev\rate\Interfaces\RateValue\iRateValue;
 
 interface iRate
 {

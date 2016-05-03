@@ -12,7 +12,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "mhndev\\Rate\\": "src"
+      "mhndev\\rate\\": "src"
     },
     "files": [
       "src/helpers.php"

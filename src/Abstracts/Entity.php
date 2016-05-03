@@ -1,7 +1,7 @@
 <?php
 namespace mhndev\rate\Abstracts;
 
-use mhndev\Rate\Interfaces\iRateableEntity;
+use mhndev\rate\Interfaces\iRateableEntity;
 
 abstract class Entity implements iRateableEntity
 {
