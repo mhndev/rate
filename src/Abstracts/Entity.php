@@ -1,8 +1,9 @@
 <?php
+namespace mhndev\Rate\Abstracts;
 
-namespace mhndev\Rate\Traits;
+use mhndev\Rate\Interfaces\iRateableEntity;
 
-trait EntityTrait
+abstract class Entity implements iRateableEntity
 {
 
     /**

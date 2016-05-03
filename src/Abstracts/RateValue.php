@@ -2,18 +2,27 @@
 
 namespace mhndev\Rate\Abstracts;
 
+use mhndev\Rate\Exceptions\InvalidValue;
 use mhndev\Rate\Interfaces\RateValue\iRateValue;
 
-class RateValue implements iRateValue
+abstract class RateValue implements iRateValue
 {
+
+    protected $value;
 
     /**
      * @param $value
      * @return $this
+     * @throws InvalidValue
      */
     function setValue($value)
     {
-        // TODO: Implement setValue() method.
+        if(!$this->isValueValid($value))
+            throw new InvalidValue;
+
+        $this->value = $value;
+
+        return $this;
     }
 
     /**
@@ -21,15 +30,12 @@ class RateValue implements iRateValue
      */
     function getValue()
     {
-        // TODO: Implement getValue() method.
+        return $this->value;
     }
 
     /**
      * @param mixed $value
      * @return bool
      */
-    function isValueValid($value)
-    {
-        // TODO: Implement isValueValid() method.
-    }
+    abstract function isValueValid($value);
 }

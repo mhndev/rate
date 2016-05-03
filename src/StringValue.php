@@ -1,0 +1,43 @@
+<?php
+
+namespace mhndev\Rate;
+
+use mhndev\Rate\Abstracts\RateValue;
+
+class StringValue extends RateValue
+{
+
+    /**
+     * @var array
+     */
+    protected $possibleValues;
+
+    /**
+     * @param mixed $value
+     * @return bool
+     */
+    function isValueValid($value)
+    {
+        return in_array($value, $this->possibleValues);
+    }
+
+    /**
+     * @param array $values
+     * @return $this
+     */
+    function setPossibleValues(array $values)
+    {
+        $this->possibleValues = $values;
+
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
+    function getPossibleValues()
+    {
+        return $this->possibleValues;
+    }
+    
+}
