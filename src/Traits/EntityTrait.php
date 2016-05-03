@@ -2,6 +2,8 @@
 
 namespace mhndev\rate\Traits;
 
+use mhndev\rate\Interfaces\RateValue\iRateValue;
+
 trait EntityTrait
 {
 
@@ -14,6 +16,11 @@ trait EntityTrait
      * @var mixed
      */
     protected $rateableEntityIdentifier;
+
+    /**
+     * @var
+     */
+    protected $rateValue;
 
 
     /**
@@ -52,5 +59,21 @@ trait EntityTrait
     function getRateableEntityIdentifier()
     {
         return $this->rateableEntityIdentifier;
+    }
+
+    /**
+     * @param iRateValue $rateValue
+     * @return $this
+     */
+    function setRateValue(iRateValue $rateValue)
+    {
+        $this->rateValue = $rateValue;
+
+        return $this;
+    }
+
+    function getRateValue()
+    {
+        return $this->rateValue;
     }
 }

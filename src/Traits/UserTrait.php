@@ -2,9 +2,9 @@
 
 namespace mhndev\rate\Traits;
 
-use mhndev\Rate\Exceptions\InvalidValue;
-use mhndev\Rate\Interfaces\iRateableEntity;
-use mhndev\Rate\Interfaces\RateValue\iRateValue;
+use mhndev\rate\Exceptions\InvalidValue;
+use mhndev\rate\Interfaces\iRateableEntity;
+use mhndev\rate\Interfaces\RateValue\iRateValue;
 
 trait UserTrait
 {
@@ -38,23 +38,35 @@ trait UserTrait
      */
     function rate($value, iRateableEntity $entity)
     {
-        if($this->rateValue->isValueValid($value)){
+        if($entity->getRateValue()->isValueValid($value)){
             $this->doRate($value, $entity);
         }else{
             throw new InvalidValue;
         }
     }
 
+    /**
+     * @param $value
+     * @param iRateableEntity $entity
+     * @return mixed
+     */
     abstract function doRate($value, iRateableEntity $entity);
 
 
-    public function setRateValue(iRateValue $rateValue)
+    /**
+     * @param iRateValue $rateValue
+     * @return $this
+     */
+    function setRateValue(iRateValue $rateValue)
     {
         $this->rateValue = $rateValue;
 
         return $this;
     }
 
+    /**
+     * @return iRateValue
+     */
     public function getRateValue()
     {
         return $this->rateValue;

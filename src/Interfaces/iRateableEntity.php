@@ -2,6 +2,8 @@
 
 namespace mhndev\rate\Interfaces;
 
+use mhndev\rate\Interfaces\RateValue\iRateValue;
+
 interface iRateableEntity
 {
     /**
@@ -25,5 +27,17 @@ interface iRateableEntity
      * @return mixed
      */
     function getRateableEntityIdentifier();
+
+    /**
+     * @param iRateValue $rateValue
+     * @return $this
+     */
+    function setRateValue(iRateValue $rateValue);
+
+    /**
+     * @return mixed
+     */
+    function getRateValue();
+
 
 }

@@ -2,6 +2,7 @@
 namespace mhndev\rate\Abstracts;
 
 use mhndev\rate\Interfaces\iRateableEntity;
+use mhndev\rate\Interfaces\RateValue\iRateValue;
 
 abstract class Entity implements iRateableEntity
 {
@@ -15,6 +16,12 @@ abstract class Entity implements iRateableEntity
      * @var mixed
      */
     protected $rateableEntityIdentifier;
+
+
+    /**
+     * @var iRateValue
+     */
+    protected $rateValue;
 
 
     /**
@@ -54,4 +61,24 @@ abstract class Entity implements iRateableEntity
     {
         return $this->rateableEntityIdentifier;
     }
+
+    /**
+     * @param iRateValue $rateValue
+     * @return $this
+     */
+    function setRateValue(iRateValue $rateValue)
+    {
+        $this->rateValue = $rateValue;
+
+        return $this;
+    }
+
+    function getRateValue()
+    {
+        return $this->rateValue;
+    }
+
+
+
+
 }
