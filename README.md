@@ -12,13 +12,13 @@
 require 'vendor/autoload.php';
 
 
-use mhndev\Rate\Abstracts\Entity;
-use mhndev\Rate\DiscreteNumberValue;
-use mhndev\Rate\Interfaces\iRateableEntity;
+use mhndev\rate\Abstracts\Entity;
+use mhndev\rate\DiscreteNumberValue;
+use mhndev\rate\Interfaces\iRateableEntity;
 
 class User
 {
-    use \mhndev\Rate\Traits\UserTrait;
+    use \mhndev\rate\Traits\UserTrait;
 
     function doRate($value, iRateableEntity $entity)
     {
