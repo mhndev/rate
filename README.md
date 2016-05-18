@@ -47,3 +47,5 @@ $user->rate(1,$comment);
 
 
 ```
+
+
