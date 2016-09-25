@@ -9,6 +9,7 @@
 
 ## Sample Usage
 ```php
+
 use mhndev\rate\Abstracts\Entity;
 use mhndev\rate\DiscreteNumberValue;
 use mhndev\rate\Interfaces\iRateableEntity;
@@ -28,9 +29,16 @@ class User
     }
 }
 
+//you can either extend your entity from AbstractEntity class
 class Post extends Entity
 {
 
+}
+//or use EntityTrait in your Entity
+
+class Post implements iRateableEntity
+{
+    use \mhndev\rate\Traits\EntityTrait;
 }
 
 
@@ -39,6 +47,11 @@ class Comment extends Entity
 
 }
 
+//or use EntityTrait in your Entity
+class Comment implements iRateableEntity
+{
+    use \mhndev\rate\Traits\EntityTrait;
+}
 
 $rateValue = (new DiscreteNumberValue())->setPossibleValues([1,2,3]);
 $post = (new Post())->setRateValue($rateValue);
@@ -66,5 +79,7 @@ $user->rate(3, $post);
 $user->like($post);
 $user->rate(1,$comment);
 $user->dislike($comment);
+
+
 
 ```

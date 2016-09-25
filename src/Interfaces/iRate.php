@@ -6,6 +6,11 @@ use mhndev\rate\Interfaces\RateValue\iRateValue;
 
 interface iRate
 {
+
+
+    const Rate_TYPE = 'rate';
+    const LIKE_TYPE = 'like';
+
     /**
      * @param iUser $user
      * @return $this
