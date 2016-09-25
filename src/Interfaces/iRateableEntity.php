@@ -40,4 +40,15 @@ interface iRateableEntity
     function getRateValue();
 
 
+    /**
+     * @param array $types
+     * @return $this
+     */
+    function setPossibleRateTypes(array $types);
+
+    /**
+     * @return array
+     */
+    function getPossibleRateTypes();
+
 }

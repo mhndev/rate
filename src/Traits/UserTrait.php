@@ -2,6 +2,8 @@
 
 namespace mhndev\rate\Traits;
 
+use mhndev\rate\Abstracts\Rate;
+use mhndev\rate\Exceptions\InvalidRateTypeException;
 use mhndev\rate\Exceptions\InvalidValue;
 use mhndev\rate\Interfaces\iRateableEntity;
 use mhndev\rate\Interfaces\RateValue\iRateValue;
@@ -19,7 +21,7 @@ trait UserTrait
      */
     function like(iRateableEntity $entity)
     {
-        $this->rate(+1, $entity);
+        $this->rate(+1, $entity, Rate::LIKE_TYPE);
     }
 
     /**
@@ -28,19 +30,29 @@ trait UserTrait
      */
     function dislike(iRateableEntity $entity)
     {
-        $this->rate(-1, $entity);
+        $this->rate(-1, $entity, Rate::LIKE_TYPE);
     }
 
     /**
      * @param $value
      * @param iRateableEntity $entity
+     * @param string $type
      * @return mixed
+     * @throws InvalidRateTypeException
      * @throws InvalidValue
      */
-    function rate($value, iRateableEntity $entity)
+    function rate($value, iRateableEntity $entity, $type = null)
     {
+        if(empty($type)){
+            $type = Rate::Rate_TYPE;
+        }
+
+        if(!in_array($type, $entity->getPossibleRateTypes() ) ){
+            throw new InvalidRateTypeException;
+        }
+
         if($entity->getRateValue()->isValueValid($value)){
-            $result = $this->doRate($value, $entity);
+            $result = $this->doRate($value, $entity, $type);
         }else{
             throw new InvalidValue;
         }
@@ -51,9 +63,10 @@ trait UserTrait
     /**
      * @param $value
      * @param iRateableEntity $entity
+     * @param string $type
      * @return mixed
      */
-    abstract function doRate($value, iRateableEntity $entity);
+    abstract function doRate($value, iRateableEntity $entity, $type);
 
 
     /**

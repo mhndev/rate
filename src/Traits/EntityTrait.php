@@ -2,6 +2,7 @@
 
 namespace mhndev\rate\Traits;
 
+use mhndev\rate\Abstracts\Rate;
 use mhndev\rate\Interfaces\RateValue\iRateValue;
 
 trait EntityTrait
@@ -24,6 +25,11 @@ trait EntityTrait
 
 
     /**
+     * @var array
+     */
+    protected static $possibleRateTypes = [Rate::LIKE_TYPE, Rate::LIKE_TYPE];
+
+    /**
      * @param string $type
      * @return $this
      */
@@ -33,6 +39,27 @@ trait EntityTrait
 
         return $this;
     }
+
+
+    /**
+     * @param array $types
+     * @return $this
+     */
+    static function setPossibleRateTypes(array $types)
+    {
+        self::$possibleRateTypes = $types;
+
+        return static::class;
+    }
+
+    /**
+     * @return array
+     */
+    function getPossibleRateTypes()
+    {
+        return self::$possibleRateTypes;
+    }
+
 
     /**
      * @param mixed $identifier

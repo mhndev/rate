@@ -5,9 +5,16 @@ namespace mhndev\rate;
 use mhndev\rate\Abstracts\RateValue;
 use mhndev\rate\Exceptions\InvalidRange;
 
+/**
+ * Class ContinuousNumberValue
+ * @package mhndev\rate
+ */
 class ContinuousNumberValue extends RateValue
 {
 
+    /**
+     * @var
+     */
     protected $possibleRange;
 
     /**

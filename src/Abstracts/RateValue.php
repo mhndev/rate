@@ -5,6 +5,10 @@ namespace mhndev\rate\Abstracts;
 use mhndev\rate\Exceptions\InvalidValue;
 use mhndev\rate\Interfaces\RateValue\iRateValue;
 
+/**
+ * Class RateValue
+ * @package mhndev\rate\Abstracts
+ */
 abstract class RateValue implements iRateValue
 {
 
