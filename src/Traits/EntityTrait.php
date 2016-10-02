@@ -60,7 +60,7 @@ trait EntityTrait
     /**
      * @return array
      */
-    function getPossibleRateTypes()
+    static function getPossibleRateTypes()
     {
         return self::$possibleRateTypes;
     }

@@ -44,11 +44,11 @@ interface iRateableEntity
      * @param array $types
      * @return $this
      */
-    function setPossibleRateTypes(array $types);
+    static function setPossibleRateTypes(array $types);
 
     /**
      * @return array
      */
-    function getPossibleRateTypes();
+    static function getPossibleRateTypes();
 
 }
