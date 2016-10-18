@@ -25,7 +25,7 @@ trait EntityTrait
     /**
      * @var string
      */
-    protected $rateValue;
+    protected static $rateValue;
 
 
     /**
@@ -97,18 +97,16 @@ trait EntityTrait
      * @param iRateValue $rateValue
      * @return $this
      */
-    public function setRateValue(iRateValue $rateValue)
+    public static function setRateValue(iRateValue $rateValue)
     {
-        $this->rateValue = $rateValue;
-
-        return $this;
+        self::$rateValue = $rateValue;
     }
 
     /**
      * @return mixed
      */
-    public function getRateValue()
+    public static function getRateValue()
     {
-        return $this->rateValue;
+        return self::$rateValue;
     }
 }

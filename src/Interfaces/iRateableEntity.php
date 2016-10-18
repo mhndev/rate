@@ -32,12 +32,12 @@ interface iRateableEntity
      * @param iRateValue $rateValue
      * @return $this
      */
-    function setRateValue(iRateValue $rateValue);
+    static function setRateValue(iRateValue $rateValue);
 
     /**
      * @return mixed
      */
-    function getRateValue();
+    static function getRateValue();
 
 
     /**
