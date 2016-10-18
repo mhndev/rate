@@ -69,23 +69,23 @@ trait UserTrait
     abstract function doRate($value, iRateableEntity $entity, $type);
 
 
-//    /**
-//     * @param iRateValue $rateValue
-//     * @return $this
-//     */
-//    function setRateValue(iRateValue $rateValue)
-//    {
-//        $this->rateValue = $rateValue;
-//
-//        return $this;
-//    }
-//
-//    /**
-//     * @return iRateValue
-//     */
-//    public function getRateValue()
-//    {
-//        return $this->rateValue;
-//    }
+    /**
+     * @param iRateValue $rateValue
+     * @return $this
+     */
+    function setRateValue(iRateValue $rateValue)
+    {
+        $this->rateValue = $rateValue;
+
+        return $this;
+    }
+
+    /**
+     * @return iRateValue
+     */
+    public function getRateValue()
+    {
+        return $this->rateValue;
+    }
 
 }

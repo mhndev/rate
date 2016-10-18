@@ -5,10 +5,6 @@ namespace mhndev\rate\Traits;
 use mhndev\rate\Abstracts\Rate;
 use mhndev\rate\Interfaces\RateValue\iRateValue;
 
-/**
- * Class EntityTrait
- * @package mhndev\rate\Traits
- */
 trait EntityTrait
 {
 
@@ -23,7 +19,7 @@ trait EntityTrait
     protected $rateableEntityIdentifier;
 
     /**
-     * @var string
+     * @var
      */
     protected static $rateValue;
 
@@ -32,7 +28,6 @@ trait EntityTrait
      * @var array
      */
     protected static $possibleRateTypes = [Rate::LIKE_TYPE, Rate::LIKE_TYPE];
-
 
     /**
      * @param string $type
@@ -97,15 +92,14 @@ trait EntityTrait
      * @param iRateValue $rateValue
      * @return $this
      */
-    public static function setRateValue(iRateValue $rateValue)
+    static function setRateValue(iRateValue $rateValue)
     {
         self::$rateValue = $rateValue;
+
+        return static::class;
     }
 
-    /**
-     * @return mixed
-     */
-    public static function getRateValue()
+    static function getRateValue()
     {
         return self::$rateValue;
     }
