@@ -1,9 +1,17 @@
 <?php
-
+/*
+ * This file is part of the mhndev\rate package.
+ *
+ * (c) Majid Abdolhosseini <majid8911303@gmail.com>
+ */
 namespace mhndev\rate;
 
 use mhndev\rate\Abstracts\RateValue;
 
+/**
+ * Class DiscreteNumberValue
+ * @package mhndev\rate
+ */
 class DiscreteNumberValue extends RateValue
 {
 

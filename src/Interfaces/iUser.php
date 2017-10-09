@@ -1,7 +1,15 @@
 <?php
-
+/*
+ * This file is part of the mhndev\rate package.
+ *
+ * (c) Majid Abdolhosseini <majid8911303@gmail.com>
+ */
 namespace mhndev\rate\Interfaces;
 
+/**
+ * Interface iUser
+ * @package mhndev\rate\Interfaces
+ */
 interface iUser
 {
     /**
